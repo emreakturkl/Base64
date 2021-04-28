@@ -5,7 +5,7 @@ CFLAGS = -Wall -I${INCLUDE_DIR}
 
 # ----------------------------------------------------------------------
 
-DIR             = $(PWD)
+PATH_           = $(PWD)
 INCLUDE_DIR     = include/
 SOURCE_DIR      = src/
 OBJECT_DIR      = obj/Debug/
@@ -19,11 +19,11 @@ DEBUG           = bin/Debug/
 TARGET = main
 
 $(DEBUG)${TARGET}: $(OBJECT_DIR)main.o $(OBJECT_SRC_DIR)base64.o
-	if ! [ -d "$(DIR)/$(DEBUG)" ]; then mkdir -p $(DEBUG); fi;
+	if ! [ -d "$(PATH_)/$(DEBUG)" ]; then mkdir -p $(DEBUG); fi;
 	${CC} -o $@ $^
 
 $(OBJECT_DIR)main.o: main.c
-	if ! [ -d "$(DIR)/$(OBJECT_DIR)" ]; then mkdir -p $(OBJECT_SRC_DIR); fi;
+	if ! [ -d "$(PATH_)/$(OBJECT_DIR)" ]; then mkdir -p $(OBJECT_SRC_DIR); fi;
 	${CC} ${CFLAGS} -c $< -o $@
 
 $(OBJECT_SRC_DIR)base64.o: $(SOURCE_DIR)base64.c
