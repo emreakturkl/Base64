@@ -1,4 +1,10 @@
-### CodeBlock IDE
-  ```base64.cbp```
-### Makefile
-```make run```
+# Base64
+
+### Code::Blocks IDE
+* Open ->  ```base64.cbp```
+
+* Project -> Build options -> Search directories -> Compiler -> Append target options -> Add -> Include Folder
+
+
+### Terminal
+* ```make run```
