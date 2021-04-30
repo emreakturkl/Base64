@@ -37,4 +37,4 @@ run:
 clean:
 	rm -f $(OBJECT_DIR)*.o
 	rm -f $(OBJECT_SRC_DIR)*.o
-	rm -f $(DEBUG)${TARGET}
+	rm -f $(DEBUG)*
